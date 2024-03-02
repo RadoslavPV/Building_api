@@ -3,7 +3,7 @@ import FetchDataButton from "./btnToGetNames";
 export default function GetNames() {
   return (
     <>
-      <h1>hello</h1>
+      <h1>Get Names From Database</h1>
       <FetchDataButton />
     </>
   );
