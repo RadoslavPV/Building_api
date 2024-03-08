@@ -15,9 +15,5 @@ export default function IdPage({ params }) {
     return nameToDisplay;
   }
 
-  return (
-    <>
-      <h1>{getName(params)}</h1>
-    </>
-  );
+  return <>{getName(params)}</>;
 }
