@@ -21,3 +21,8 @@ export async function POST(req: Request) {
     });
   return Response.json({ result });
 }
+
+export async function DELETE(req: Request) {
+  const deleteUser = await prisma.user.deleteMany();
+  return Response.json(deleteUser);
+}
