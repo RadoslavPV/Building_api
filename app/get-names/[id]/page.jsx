@@ -2,7 +2,9 @@
 
 export default function IdPage({ params }) {
   async function getName(params) {
-    const response = await fetch("http://localhost:3000/api/");
+    const response = await fetch("http://localhost:3000/api/", {
+      method: "GET",
+    });
     const names = await response.json();
 
     let nameToDisplay;

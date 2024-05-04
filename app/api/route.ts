@@ -22,7 +22,19 @@ export async function POST(req: Request) {
   return Response.json({ result });
 }
 
+// export async function DELETE(req: Request) {
+//   const deleteUser = await prisma.user.deleteMany();
+//   return Response.json(deleteUser);
+// }
+
 export async function DELETE(req: Request) {
-  const deleteUser = await prisma.user.deleteMany();
+  const body = await req.json();
+  const userId = await body.id;
+
+  const deleteUser = await prisma.user.delete({
+    where: {
+      id: userId,
+    },
+  });
   return Response.json(deleteUser);
 }
