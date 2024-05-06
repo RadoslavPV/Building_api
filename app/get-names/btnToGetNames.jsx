@@ -5,7 +5,7 @@ export default function FetchDataButton() {
   const [namesToDisplay, setNamesToDisplay] = useState([]);
 
   function handleClickDelete(ids) {
-    fetch("http://localhost:3000/api", {
+    fetch("/api", {
       method: "DELETE",
       body: JSON.stringify({
         id: ids,
@@ -14,7 +14,7 @@ export default function FetchDataButton() {
   }
 
   async function fetchUsers() {
-    const response = await fetch("http://localhost:3000/api", {
+    const response = await fetch("/api", {
       method: "GET",
     });
     const names = await response.json();

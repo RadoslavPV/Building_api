@@ -12,7 +12,7 @@ export default function PostName() {
 
   function handleClick() {
     console.log(nameInputField);
-    fetch("http://localhost:3000/api", {
+    fetch("/api", {
       method: "POST",
       body: JSON.stringify({
         name: nameInputField,
